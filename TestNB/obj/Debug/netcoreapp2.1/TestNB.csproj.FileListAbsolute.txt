@@ -1,0 +1,11 @@
+/home/alissia/TestNB/bin/Debug/netcoreapp2.1/TestNB.deps.json
+/home/alissia/TestNB/bin/Debug/netcoreapp2.1/TestNB.runtimeconfig.json
+/home/alissia/TestNB/bin/Debug/netcoreapp2.1/TestNB.runtimeconfig.dev.json
+/home/alissia/TestNB/bin/Debug/netcoreapp2.1/TestNB.dll
+/home/alissia/TestNB/bin/Debug/netcoreapp2.1/TestNB.pdb
+/home/alissia/TestNB/obj/Debug/netcoreapp2.1/TestNB.csprojAssemblyReference.cache
+/home/alissia/TestNB/obj/Debug/netcoreapp2.1/TestNB.csproj.CoreCompileInputs.cache
+/home/alissia/TestNB/obj/Debug/netcoreapp2.1/TestNB.AssemblyInfoInputs.cache
+/home/alissia/TestNB/obj/Debug/netcoreapp2.1/TestNB.AssemblyInfo.cs
+/home/alissia/TestNB/obj/Debug/netcoreapp2.1/TestNB.dll
+/home/alissia/TestNB/obj/Debug/netcoreapp2.1/TestNB.pdb

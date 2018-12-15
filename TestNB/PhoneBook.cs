@@ -1,9 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
 
 namespace NotebookApp
 {
@@ -38,9 +35,9 @@ namespace NotebookApp
             string Name = Console.ReadLine();
             Console.WriteLine("Surname: ");
             string Surname = Console.ReadLine();
-            long phoneNumber = PhoneValidation();
-            var index = GetIndex(Name, Surname, phoneNumber);
-            notes.Add(new Note(index, phoneNumber, Name, Surname)); 
+            long PhoneNumber = PhoneValidation();
+            var index = GetIndex(Name, Surname, PhoneNumber);
+            notes.Add(new Note(index, PhoneNumber, Name, Surname)); 
             Console.WriteLine("Anything to add? Type \"yes\" or press any key to exit");
             if (Console.ReadLine().Trim().ToLower().Equals("yes"))
             {
@@ -50,23 +47,23 @@ namespace NotebookApp
 
         public void DeleteNote()
         {
-            Console.WriteLine("Enter id"); 
-            int id = int.Parse(Console.ReadLine());
-            notes.RemoveAt(id - 1);
+            Console.WriteLine("Enter Id"); 
+            int Id = int.Parse(Console.ReadLine());
+            notes.RemoveAt(Id - 1);
             //Правильный порядок индексов после удаления записи
             for (int i = 0; i < notes.Count; i++)
             {
                 Note s = notes[i];
-                if (s.id != notes.IndexOf(s) + 1)
+                if (s.Id != notes.IndexOf(s) + 1)
                 {
-                    s.id = notes.IndexOf(s) + 1;
+                    s.Id = notes.IndexOf(s) + 1;
                 }
 
             }
         }
         public void EditNote()
         {
-            Console.WriteLine("Enter id: ");
+            Console.WriteLine("Enter Id: ");
             int index = int.Parse(Console.ReadLine());
             Editor(index);
         }
@@ -93,7 +90,7 @@ namespace NotebookApp
                         notes[index-1].MiddleName = Console.ReadLine();
                         break;
                     case "P":
-                        notes[index-1].phoneNumber = PhoneValidation();
+                        notes[index-1].PhoneNumber = PhoneValidation();
                         break;
                     case "B":
                         Console.WriteLine("Enter date of Birthday: ");
@@ -127,9 +124,9 @@ namespace NotebookApp
 
         public void ShowANote()
         {
-           Console.WriteLine("Enter id:");
-           int id = int.Parse(Console.ReadLine());
-           Console.WriteLine(notes[id - 1].Full());
+           Console.WriteLine("Enter Id:");
+           int Id = int.Parse(Console.ReadLine());
+           Console.WriteLine(notes[Id - 1].Full());
            Console.WriteLine("Press any key");
            Console.ReadKey();
 
@@ -138,10 +135,9 @@ namespace NotebookApp
         {
             while (true)
             {
-                long phoneNumber;
                 Console.WriteLine("Enter phone (more than 5 numbers): ");
                 string input = Console.ReadLine().Trim();
-                if ((input.Length < 5) || (!long.TryParse(input, out phoneNumber)))
+                if ((input.Length < 5) || (!long.TryParse(input, out long PhoneNumber)))
                 {
                     Console.WriteLine("Incorrect input");
                 }
@@ -152,7 +148,7 @@ namespace NotebookApp
             }
         }
 
-        private int GetIndex(string Name, string Surname, long phoneNumber)
+        private int GetIndex(string Name, string Surname, long PhoneNumber)
         {
             if (notes.Count > 0)
             {

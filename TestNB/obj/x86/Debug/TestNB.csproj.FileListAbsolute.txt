@@ -1,0 +1,5 @@
+C:\Users\Alice\Desktop\TestNB\bin\Debug\ConsoleApplication.exe
+C:\Users\Alice\Desktop\TestNB\bin\Debug\ConsoleApplication.pdb
+C:\Users\Alice\Desktop\TestNB\obj\x86\Debug\TestNB.csproj.CoreCompileInputs.cache
+C:\Users\Alice\Desktop\TestNB\obj\x86\Debug\ConsoleApplication.exe
+C:\Users\Alice\Desktop\TestNB\obj\x86\Debug\ConsoleApplication.pdb
